@@ -1,3 +1,6 @@
+https://github.com/Nuriua/ShoppingList2.0/assets/54796379/12e91d86-3bcb-40c6-a2d3-b61c706c2d57
+
+
 ![video_2024-03-31_12-16-17-ezgif com-resize (1)](https://github.com/Nuriua/ShoppingList2.0/assets/54796379/7d886c21-a1af-4b97-8d52-24919e255d2b)
 
 *********************************************************
