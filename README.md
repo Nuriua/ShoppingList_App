@@ -1,4 +1,4 @@
-![video_2024-03-31_12-16-17](https://github.com/Nuriua/ShoppingList2.0/assets/54796379/6e5408a6-8352-473f-97d9-06555455c875)
+![video_2024-03-31_12-16-17-ezgif com-resize](https://github.com/Nuriua/ShoppingList2.0/assets/54796379/b6a5e35e-bc13-4987-bbdf-0f5db480c533)
 
 *********************************************************
 Мобильное приложение предназначено для составления списка покупок.
