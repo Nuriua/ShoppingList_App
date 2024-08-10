@@ -7,14 +7,13 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import com.selva.shoppinglist20.domain.ShopItem
 import com.selva.shoppinglist20.domain.ShopListRepository
+import javax.inject.Inject
 import kotlin.random.Random
 
-class ShopListRepositoryImpl(
-    application: Application
+class ShopListRepositoryImpl @Inject constructor(
+    private val shopListDao: ShopListDao,
+    private val mapper: ShopListMapper
 ) : ShopListRepository {
-
-    private val shopListDao = AppDatabase.getInstance(application).shopListDao()
-    private val mapper = ShopListMapper()
 
     override fun getShopList(): LiveData<List<ShopItem>> = Transformations.map(
         shopListDao.getShopList()

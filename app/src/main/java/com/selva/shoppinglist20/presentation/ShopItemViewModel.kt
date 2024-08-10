@@ -7,18 +7,15 @@ import com.selva.shoppinglist20.domain.AddShopItemUseCase
 import com.selva.shoppinglist20.domain.EditShopItemUseCase
 import com.selva.shoppinglist20.domain.GetShopItemUseCase
 import com.selva.shoppinglist20.domain.ShopItem
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.cancel
+import javax.inject.Inject
 import kotlinx.coroutines.launch
 
-class ShopItemViewModel(application: Application) : AndroidViewModel(application) {
+class ShopItemViewModel @Inject constructor(
+    private val getShopItemUseCase: GetShopItemUseCase,
+    private val addShopItemUseCase: AddShopItemUseCase,
+    private val editShopItemUseCase: EditShopItemUseCase
+) : ViewModel() {
 
-    private val repository = ShopListRepositoryImpl(application)
-
-    private val getShopItemUseCase = GetShopItemUseCase(repository)
-    private val addShopItemUseCase = AddShopItemUseCase(repository)
-    private val editShopItemUseCase = EditShopItemUseCase(repository)
 
     private val _errorInputName = MutableLiveData<Boolean>()
     val errorInputName: LiveData<Boolean>
