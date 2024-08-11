@@ -1,8 +1,9 @@
 package com.selva.shoppinglist20.data
 
 import com.selva.shoppinglist20.domain.ShopItem
+import javax.inject.Inject
 
-class ShopListMapper {
+class ShopListMapper @Inject constructor(){
 
     fun mapEntityToDbModel(shopItem: ShopItem) = ShopItemDbModel(
         id = shopItem.id,
