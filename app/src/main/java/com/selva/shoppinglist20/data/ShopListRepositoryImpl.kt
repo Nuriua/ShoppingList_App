@@ -1,23 +1,17 @@
 package com.selva.shoppinglist20.data
 
-import android.app.Application
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MediatorLiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.Transformations
+import androidx.lifecycle.map
 import com.selva.shoppinglist20.domain.ShopItem
 import com.selva.shoppinglist20.domain.ShopListRepository
 import javax.inject.Inject
-import kotlin.random.Random
 
 class ShopListRepositoryImpl @Inject constructor(
     private val shopListDao: ShopListDao,
     private val mapper: ShopListMapper
 ) : ShopListRepository {
 
-    override fun getShopList(): LiveData<List<ShopItem>> = Transformations.map(
-        shopListDao.getShopList()
-    ) {
+    override fun getShopList(): LiveData<List<ShopItem>> = shopListDao.getShopList().map {
         mapper.mapListDbModelToListEntity(it)
     }
 

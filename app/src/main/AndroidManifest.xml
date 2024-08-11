@@ -28,6 +28,10 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        <provider
+            android:authorities="com.selva.shoppinglist20"
+            android:name=".data.ShopListProvider"
+            android:exported="true"/>
     </application>
 
 </manifest>
